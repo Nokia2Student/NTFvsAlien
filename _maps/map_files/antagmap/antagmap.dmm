@@ -4550,7 +4550,7 @@
 /obj/structure/cable,
 /obj/machinery/door/airlock/mainship/secure{
 	name = "\improper KZ Research Airlock";
-	req_access = list(239, 240)
+	req_one_access = list(239, 240)
 	},
 /obj/structure/barricade/wooden{
 	dir = 8

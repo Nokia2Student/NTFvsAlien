@@ -76,6 +76,9 @@
 		if(mind.active && is_gameplay_level(z))
 			var/turf/T = get_turf(src)
 			deadchat_broadcast(" has died at <b>[AREACOORD(T)]</b>[TURF_LINK(null, T)].", "<b>[mind.name]</b>", follow_target = src, turf_target = T, message_type = DEADCHAT_DEATHRATTLE)
+	if(HAS_TRAIT(src, TRAIT_SKILLS_CHANGED_BY_KZ))
+		src.set_skills(getSkillsType(src.skills.type))
+		REMOVE_TRAIT(src, TRAIT_SKILLS_CHANGED_BY_KZ, TRAIT_GENERIC)
 
 	GLOB.dead_mob_list |= src
 	GLOB.offered_mob_list -= src

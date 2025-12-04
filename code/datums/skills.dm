@@ -163,6 +163,28 @@ engineer, construction, leadership, medical, surgery, pilot, police, powerloader
 	src.mech+difference,\
 	src.stamina+difference)
 
+/datum/skills/proc/modifyAllRatingsUptoZero(difference)
+	return getSkills(max(0, src.unarmed+difference),\
+	max(0, src.melee_weapons+difference),\
+	max(0, src.combat+difference),\
+	max(0, src.pistols+difference),\
+	max(0, src.shotguns+difference),\
+	max(0, src.rifles+difference),\
+	max(0, src.smgs+difference),\
+	max(0, src.heavy_weapons+difference),\
+	max(0, src.smartgun+difference),\
+	max(0, src.engineer+difference),\
+	max(0, src.construction+difference),\
+	max(0, src.leadership+difference),\
+	max(0, src.medical+difference),\
+	max(0, src.surgery+difference),\
+	max(0, src.pilot+difference),\
+	max(0, src.police+difference),\
+	max(0, src.powerloader+difference),\
+	max(0, src.large_vehicle+difference),\
+	max(0, src.mech+difference),\
+	max(0, src.stamina+difference))
+
 /// acts as [/proc/modifyRating] but sets the rating directly rather than modify it
 /datum/skills/proc/setRating(unarmed, melee_weapons,\
 combat, pistols, shotguns, rifles, smgs, heavy_weapons, smartgun,\
